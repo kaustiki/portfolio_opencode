@@ -76,12 +76,12 @@ A Computer Science engineer with experience across machine learning and backend 
 
 ### BITS Pilani WILP
 **M.Tech in Artificial Intelligence and Machine learning**
-*June 2018 - April 2022*
+*May 2024 - February 2026*
 - CGPA: 9.51
 
 ### MNM Jain Engineering College, Anna University
 **B.E. (Computer Science and Engineering)**
-*May 2024 - February 2026*
+*June 2018 - April 2022*
 - CGPA: 9.07
 
 ### Vaels International School (Chennai, Tamil Nadu, India)

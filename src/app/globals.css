@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light mode */
+  :root {
+    --bg: 255 255 255;
+    --bg-subtle: 248 250 252;
+    --fg: 51 65 85;
+    --fg-muted: 100 116 139;
+    --primary-rgb: 15 23 42;
+    --accent-rgb: 13 148 136;
+    --accent-hover-rgb: 15 118 110;
+    --border-rgb: 226 232 240;
+  }
+
+  /* Dark mode — default */
+  .dark {
+    --bg: 0 0 0;
+    --bg-subtle: 10 10 10;
+    --fg: 255 255 255;
+    --fg-muted: 148 163 184;
+    --primary-rgb: 255 255 255;
+    --accent-rgb: 20 184 166;
+    --accent-hover-rgb: 13 148 136;
+    --border-rgb: 39 39 42;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* transparent — Three.js canvas provides the actual page background */
+    background-color: transparent;
+    @apply text-text font-inter antialiased;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora;
+    color: rgb(var(--primary-rgb));
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-16 lg:py-24;
+  }
+
+  .section-title {
+    @apply mb-12;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    background-color: rgb(var(--accent-rgb));
+    margin-top: 0.75rem;
+    border-radius: 2px;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 min-h-[44px] font-medium transition-all duration-150 rounded-md;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-hover;
+  }
+
+  .btn-secondary {
+    @apply btn bg-background text-accent border border-accent hover:bg-accent/10;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-accent hover:underline underline-offset-4;
+  }
+
+  .card {
+    @apply bg-background border border-border rounded-lg p-6 transition-all duration-200;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .card {
+    box-shadow: none;
+  }
+
+  .card:hover {
+    @apply border-accent;
+  }
+
+  .input {
+    @apply w-full h-12 px-4 border border-border rounded-md bg-background text-text placeholder:text-text-muted transition-all duration-150;
+  }
+
+  .input:focus {
+    @apply outline-none ring-2 ring-accent ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
