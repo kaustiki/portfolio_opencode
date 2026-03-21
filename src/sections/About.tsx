@@ -1,86 +1,78 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Section } from "@/components";
-import { summary, aboutHighlights, contact } from "@/data/portfolio";
+import { aboutHighlights, education } from "@/data/portfolio";
 
 export default function About() {
+  const topTwo = education.slice(0, 2);
+
   return (
-    <Section id="about" title="About Me">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+    <section id="about" className="section">
+      <div className="container">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-xl font-semibold mb-4 text-primary">
-            Professional Summary
-          </h3>
-          <p className="text-text leading-relaxed">{summary}</p>
+          About
+        </motion.h2>
 
-          <div className="mt-8">
-            <h3 className="text-xl font-semibold mb-4 text-primary">
-              Contact Information
-            </h3>
-            <div className="space-y-3 text-text">
-              <p className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <a href={`mailto:${contact.email}`} className="hover:text-accent transition-colors">
-                  {contact.email}
-                </a>
-              </p>
-              <p className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span>{contact.phone}</span>
-              </p>
-              <p className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>{contact.address}</span>
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="bg-background/60 backdrop-blur-sm border border-border rounded-lg p-8"
-        >
-          <h3 className="text-xl font-semibold mb-6 text-primary">
-            Key Highlights
-          </h3>
-          <ul className="space-y-4">
-            {aboutHighlights.map((highlight, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <svg
-                  className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left — bio + highlights */}
+          <motion.div
+            initial={{ opacity: 0, x: -16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+          >
+            <p className="text-text-muted leading-relaxed text-base mb-8">
+              I&apos;m a Computer Science engineer with hands-on experience building ML pipelines,
+              NLP systems, and backend APIs. Currently pursuing an M.Tech in AI &amp; ML at BITS
+              Pilani (CGPA 9.51), I thrive at the intersection of research and engineering —
+              turning model prototypes into reliable, deployed systems.
+            </p>
+            <ul className="space-y-3">
+              {aboutHighlights.map((h, i) => (
+                <motion.li
+                  key={i}
+                  className="flex items-start gap-3 text-sm text-text-muted"
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-text">{highlight}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+                  <span className="text-accent mt-0.5 shrink-0">▸</span>
+                  {h}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Right — education */}
+          <motion.div
+            initial={{ opacity: 0, x: 16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, delay: 0.1 }}
+          >
+            <h3 className="text-text-muted text-xs tracking-[0.2em] uppercase font-mono mb-6">
+              Education
+            </h3>
+            <div className="space-y-4">
+              {topTwo.map((edu) => (
+                <div key={edu.institution} className="card">
+                  <p className="text-accent text-xs font-mono mb-1">{edu.grade}</p>
+                  <h4 className="text-white text-sm font-semibold leading-snug">{edu.degree}</h4>
+                  <p className="text-text-muted text-sm mt-1">{edu.institution}</p>
+                  <p className="text-text-muted text-xs mt-1 font-mono">{edu.period}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }

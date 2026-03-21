@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Akurati Kaustiki | Computer Science Engineer | M.Tech AI/ML",
+  title: "Akurati Kaustiki | AI & ML Engineer",
   description:
     "Portfolio of Akurati Kaustiki, a Computer Science Engineer specializing in Machine Learning and Backend Systems.",
   keywords: ["Machine Learning", "AI", "MLOps", "Backend Developer", "Portfolio"],
@@ -41,15 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        {/* Prevent flash of unstyled content — apply dark class before paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('theme')||'dark';if(t==='dark')document.documentElement.classList.add('dark');}catch(e){document.documentElement.classList.add('dark');}`,
-          }}
-        />
-      </head>
+    <html lang="en" className="dark scroll-smooth">
       <body
         className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
