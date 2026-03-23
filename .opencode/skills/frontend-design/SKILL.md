@@ -1,42 +1,52 @@
 ---
 name: frontend-design
-description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+description: Create terminal-style, monochrome interfaces with code-like aesthetics. Use this skill when building components for the Akurati Kaustiki portfolio.
 license: Complete terms in LICENSE.txt
 ---
 
-This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
+This skill guides creation of terminal-style, monochrome interfaces for the Akurati Kaustiki portfolio. The aesthetic is restrained, code-like, and minimal - NOT bold or colorful.
 
-The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
+## Design Direction
 
-## Design Thinking
+Before coding, understand the constraints:
+- **Aesthetic**: Unified coder/terminal aesthetic - everything feels like code
+- **Colors**: Pure monochrome (black/white only, NO accent colors)
+- **Typography**: JetBrains Mono only - monospace throughout
+- **Motion**: Minimal - code executes, things appear (no bouncy/spinning transitions)
+- **Components**: Minimal, code-like (4px radius max)
+- **Layout**: Clean, structured, data-visualization style
 
-Before coding, understand the context and commit to a BOLD aesthetic direction:
-- **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
-- **Constraints**: Technical requirements (framework, performance, accessibility).
-- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+**CRITICAL**: This is a restrained, minimal aesthetic. NOT bold, colorful, or decorative.
 
-**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
-
-Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
-- Production-grade and functional
-- Visually striking and memorable
-- Cohesive with a clear aesthetic point-of-view
-- Meticulously refined in every detail
-
-## Frontend Aesthetics Guidelines
+## Frontend Guidelines
 
 Focus on:
-- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
-- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
-- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
-- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
-- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, and grain overlays.
+- **Typography**: JetBrains Mono only. Use weight variations (400, 600, 700) for hierarchy. Never use sans-serif fonts.
+- **Color & Theme**: Pure monochrome. Light mode: #FFFFFF background, #000000 text. Dark mode: #000000 background, #FFFFFF text. No accent colors ever.
+- **Motion**: Minimal animations. Fade in (200ms), hover (150ms), terminal blink (1s). No bouncy, spinning, or elaborate transitions.
+- **Spatial Composition**: Clean grids, structured layouts, generous negative space. No asymmetry, overlap, or diagonal flow.
+- **Backgrounds**: Solid colors only. Subtle neural network pattern (4% opacity) allowed on hero section. No gradients, textures, or decorative patterns.
 
-NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
+## Forbidden Anti-Patterns
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.
+NEVER use:
+- Any color other than black/white
+- Sans-serif fonts (Inter, Roboto, Arial, system fonts)
+- Rounded corners > 8px
+- Gradients
+- Shadows (except subtle pattern)
+- Decorative elements (except neural network pattern)
+- Carousels or sliders
+- Overly polished "corporate" feel
+- Bold, colorful, or maximalist aesthetics
 
-**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.
+## Implementation Quality
 
-Remember: Claude is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+Code must be:
+- Production-grade and functional
+- Clean, semantic HTML5
+- CSS3 with custom properties for theming
+- Vanilla JavaScript ES6+ modules
+- Accessible and performant
+
+Remember: Elegance comes from restraint and precision. Execute the terminal aesthetic with care - every detail should feel like code.

@@ -8,6 +8,8 @@ Computer Science Engineer | M.Tech (AI & ML)
 **Address:** Flat F Ashok Elite Tamarai Homes, 1st Street Elcot Avenue, Sholinganallur, Chennai - 600119
 **Email:** akuratikaustiki@gmail.com
 **Phone:** 7550169233
+**GitHub:** github.com/akuratikaustiki
+**LinkedIn:** linkedin.com/in/akuratikaustiki
 
 ---
 

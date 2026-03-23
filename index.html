@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akurati Kaustiki | Computer Science Engineer</title>
+    <meta name="description" content="Portfolio of Akurati Kaustiki - Computer Science Engineer specializing in AI/ML and backend systems">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="neural-bg" id="neural-bg"></div>
+    <header class="nav">
+        <nav class="nav__container">
+            <a href="#hero" class="nav__logo">AK</a>
+            <ul class="nav__links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav__theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon-light">○</span>
+                <span class="theme-icon-dark">●</span>
+            </button>
+            <button class="nav__hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero__container">
+                <div class="hero__profile">
+                    <div class="hero__photo">
+                        <span class="hero__initials">AK</span>
+                    </div>
+                    <div class="hero__info">
+                        <h1 class="hero__name">Akurati Kaustiki</h1>
+                        <p class="hero__title">Computer Science Engineer</p>
+                        <p class="hero__subtitle">M.Tech (AI & ML)</p>
+                    </div>
+                </div>
+                <div class="hero__terminal">
+                    <div class="terminal">
+                        <div class="terminal__header">
+                            <span class="terminal__dot"></span>
+                            <span class="terminal__dot"></span>
+                            <span class="terminal__dot"></span>
+                            <span class="terminal__title">akurati@portfolio ~ </span>
+                        </div>
+                        <div class="terminal__output" id="terminal-output"></div>
+                        <div class="terminal__input-line">
+                            <span class="terminal__prompt">>>></span>
+                            <input type="text" class="terminal__input" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                            <span class="terminal__cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section__container">
+                <h2 class="section__title">About</h2>
+                <div class="about__content">
+                    <p class="about__summary" id="about-summary"></p>
+                    <ul class="about__highlights" id="about-highlights"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Skills</h2>
+                <div class="skills__grid" id="skills-grid"></div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Projects</h2>
+                <div class="projects__tabs" id="projects-tabs"></div>
+                <div class="projects__grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Experience</h2>
+                <div class="timeline" id="experience-timeline"></div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Education</h2>
+                <div class="timeline" id="education-timeline"></div>
+            </div>
+        </section>
+
+        <section id="finearts" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Fine Arts</h2>
+                <div class="finearts__grid" id="finearts-grid"></div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Certifications</h2>
+                <div class="certifications__grid" id="certifications-grid"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Contact</h2>
+                <div class="contact__content" id="contact-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; <span id="year"></span> Akurati Kaustiki</p>
+        </div>
+    </footer>
+
+    <script type="module" src="data/portfolio.js"></script>
+    <script type="module" src="js/theme.js"></script>
+    <script type="module" src="js/neural-pattern.js"></script>
+    <script type="module" src="js/terminal.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

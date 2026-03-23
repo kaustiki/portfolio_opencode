@@ -3,148 +3,89 @@
 ---
 
 ## Phase 1: Project Foundation
-**Day 1**
-
-- [ ] Initialize Next.js 14 with TypeScript
-- [ ] Install dependencies (framer-motion, tailwindcss)
-- [ ] Configure Tailwind with design colors from design.md
-- [ ] Set up Google Fonts (Sora, Inter)
-- [ ] Create folder structure per requirements.md
-- [ ] Configure tsconfig.json strict mode
-- [ ] Create base layout with fonts
-
-**Deliverable:** Running Next.js project
+- [x] Create folder structure (css/, js/, data/, assets/)
+- [x] Create index.html with semantic structure
+- [x] Create base CSS with theming variables
+- [x] Create data/portfolio.js with all content from plans/data.md
 
 ---
 
-## Phase 2: Core Layout & Navigation
-**Day 2**
-
-- [ ] Create Navigation component
-- [ ] Create Footer component
-- [ ] Create Button component (primary, secondary, ghost)
-- [ ] Create Card component
-- [ ] Create Section wrapper component
-- [ ] Add skip to content link
-
-**Deliverable:** Reusable UI components
+## Phase 2: Core Styling & Theme
+- [x] Set up CSS custom properties for light/dark themes
+- [x] Import JetBrains Mono from Google Fonts
+- [x] Create base typography styles
+- [x] Implement theme toggle JS
 
 ---
 
-## Phase 3: Data & Hero
-**Day 2-3**
-
-- [ ] Create `/data/portfolio.ts` with all content from plans/data.md
-- [ ] Build Hero section
-- [ ] Build About section
-
-**Deliverable:** Hero + About complete
-
----
-
-## Phase 4: Skills Section
-**Day 3**
-
-- [ ] Create Skills section with categories
-- [ ] Responsive grid layout
-
-**Deliverable:** Skills display
+## Phase 3: Hero Section
+- [x] Build split layout (photo left, terminal right)
+- [x] Create profile photo placeholder with initials
+- [x] Build terminal interface (input + output area)
+- [x] Add blinking cursor effect
+- [x] Create neural network background pattern (js/neural-pattern.js)
+- [x] Integrate pattern into hero section
 
 ---
 
-## Phase 5: Fine Arts
-**Day 3**
-
-- [ ] Create Fine Arts section
-- [ ] Visual treatment: Dance, Music, Martial Arts, Chess
-
-**Deliverable:** Fine Arts showcase
-
----
-
-## Phase 6: Experience & Education
-**Day 3-4**
-
-- [ ] Create Timeline component
-- [ ] Build Experience section (TCS, DigiYosha)
-- [ ] Build Education section (BITS, Anna University)
-
-**Deliverable:** Timeline sections
+## Phase 4: Terminal Logic
+- [x] Create terminal.js with command parser
+- [x] Implement all commands (help, df.info, model.summary, education.head, etc.)
+- [x] Format output as code blocks
+- [x] Add auto-scroll on new output
+- [x] Add welcome message with typing animation
+- [x] Implement command history (up/down arrows)
+- [x] Implement tab completion
 
 ---
 
-## Phase 7: Projects Section
-**Day 4-5**
-
-- [ ] Build featured project (Violence Detection)
-- [ ] Create project grid (Image Captioning, Sentiment Analysis, etc.)
-- [ ] Add hover effects
-
-**Deliverable:** Projects showcase
-
----
-
-## Phase 8: Certifications & Contact
-**Day 5**
-
-- [ ] Build Certifications section
-- [ ] Build Contact section with form
-
-**Deliverable:** Contact form functional
+## Phase 5: Content Sections
+- [x] Build About section
+- [x] Build Skills section (categorized)
+- [x] Build Experience section (timeline)
+- [x] Build Projects section (featured + grid)
+- [x] Build Fine Arts section
+- [x] Build Education section
+- [x] Build Certifications section
+- [x] Build Contact section
 
 ---
 
-## Phase 9: Polish & Animations
-**Day 6**
-
-- [ ] Add Framer Motion animations
-- [ ] Test color contrast
-- [ ] Test keyboard navigation
-- [ ] Add favicon
-- [ ] `prefers-reduced-motion` support
-
-**Deliverable:** Polished interface
+## Phase 6: Navigation & Polish
+- [x] Create fixed navigation header
+- [x] Add smooth scroll behavior
+- [x] Implement mobile hamburger menu
+- [x] Add hover states to buttons/links
 
 ---
 
-## Phase 10: Testing & QA
-**Day 6-7**
-
-- [ ] Test responsive breakpoints
-- [ ] Run Lighthouse audit
-- [ ] Fix accessibility issues
-
-**Deliverable:** No critical bugs
+## Phase 7: Timeline Redesign
+- [x] Update design.md with git-log style timeline spec
+- [x] Update CSS for git-log timeline styling
+- [x] Update JS renderExperience() for new format
+- [x] Update JS renderEducation() for new format
 
 ---
 
-## Phase 11: Deployment
-**Day 7-8**
-
-- [ ] Connect to Vercel
-- [ ] Deploy to production
-- [ ] Verify live site
-
-**Deliverable:** Live website
+## Phase 8: Testing & QA
+- [x] Test light/dark theme toggle
+- [x] Test all terminal commands
+- [x] Test responsive breakpoints
+- [x] Verify all sections render correctly
 
 ---
 
 ## Timeline
 
-| Phase | Day | Focus |
-|-------|-----|-------|
-| 1 | 1 | Setup |
-| 2 | 2 | Layout + Nav |
-| 3 | 2-3 | Hero + Data |
-| 4 | 3 | Skills |
-| 5 | 3 | Fine Arts |
-| 6 | 3-4 | Experience + Education |
-| 7 | 4-5 | Projects |
-| 8 | 5 | Certifications + Contact |
-| 9 | 6 | Polish |
-| 10 | 6-7 | QA |
-| 11 | 7-8 | Deploy |
+| Phase | Focus |
+|-------|-------|
+| 1 | Setup & base files |
+| 2 | CSS theming |
+| 3 | Hero + terminal UI |
+| 4 | Terminal logic |
+| 5 | Content sections |
+| 6 | Nav + polish |
+| 7 | Timeline redesign |
+| 8 | Testing |
 
-**Total:** 7-8 days
-
-
+**Total:** 8 phases
